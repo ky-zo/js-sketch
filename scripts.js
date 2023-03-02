@@ -38,6 +38,9 @@ function newGrid (size){
                 column.addEventListener("mouseover", draw => {
                     column.setAttribute("style",`background-color:${getColor(color)}`)
                 },false);
+                column.addEventListener("ontouchstart", draw => {
+                    column.setAttribute("style",`background-color:${getColor(color)}`)
+                },false);
                 row.append(column)
             }
             matrix.append(row)
